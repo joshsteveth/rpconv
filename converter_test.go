@@ -22,9 +22,9 @@ func TestPrintHundred(t *testing.T) {
 }
 
 func TestPrintRupiah(t *testing.T) {
-	input := float64(993100550123)
+	input := float64(993111550123)
 	rp := New(input)
-	assert.Equal(t, "SEMBILAN RATUS SEMBILAN PULUH TIGA MILYAR SERATUS JUTA LIMA RATUS LIMA PULUH RIBU SERATUS DUA PULUH TIGA RUPIAH", fmt.Sprintf("%s", rp))
+	assert.Equal(t, "SEMBILAN RATUS SEMBILAN PULUH TIGA MILYAR SERATUS SEBELAS JUTA LIMA RATUS LIMA PULUH RIBU SERATUS DUA PULUH TIGA RUPIAH", fmt.Sprintf("%s", rp))
 
 	input = float64(0)
 	rp = New(input)
