@@ -1,5 +1,9 @@
 ##Rp Converter
 convert float64 into string (in Bahasa)
+```
+if x <= 0{ return "NOL RUPIAH" }
+```
+only supports until x < 1 trillion
 
 Usage example:
 ```

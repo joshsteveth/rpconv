@@ -29,6 +29,10 @@ func TestPrintRupiah(t *testing.T) {
 	input = float64(0)
 	rp = New(input)
 	assert.Equal(t, "NOL RUPIAH", fmt.Sprintf("%s", rp))
+
+	input = float64(-1)
+	rp = New(input)
+	assert.Equal(t, "NOL RUPIAH", fmt.Sprintf("%s", rp))
 }
 
 func TestSpecialSingleTens(t *testing.T) {
