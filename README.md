@@ -1,14 +1,12 @@
 ##Rp Converter
 convert float64 into string (in Bahasa)
-```
-if x <= 0{ return "NOL RUPIAH" }
-```
-only supports until x < 1 trillion
+only supports until 0 <= x < 10^12
 
 Usage example:
 ```
-rp := rpconv.Convert(993111550123)
-fmt.Println(rp)
+if rp, err := rpconv.Convert(993111550123); err != nil{
+	fmt.Println(rp)
+}
 ```
 This should print 
 ```

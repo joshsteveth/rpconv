@@ -42,11 +42,18 @@ type (
 	}
 )
 
-func Convert(inp float64) string {
-	return fmt.Sprintf("%s", New(inp))
+//return error if input is less than 0 or greater equal 1 trillion
+func Convert(inp float64) (string, error) {
+	if inp < 0 {
+		return "", fmt.Errorf("Only supports number greater or equal 0")
+	}
+	if inp >= math.Pow(1000, 4) {
+		return "", fmt.Errorf("Only supports number lesser than 10^12")
+	}
+	return fmt.Sprintf("%s", new(inp)), nil
 }
 
-func New(inp float64) *Rupiah {
+func new(inp float64) *Rupiah {
 	var result Rupiah
 
 	for power := 3; power >= 0; power-- {
