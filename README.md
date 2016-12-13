@@ -4,7 +4,7 @@ only supports until 0 <= x < 10^12
 
 Usage example:
 ```
-if rp, err := rpconv.Convert(993111550123); err != nil{
+if rp, err := rpconv.Convert(993111550123); err == nil{
 	fmt.Println(rp)
 }
 ```
